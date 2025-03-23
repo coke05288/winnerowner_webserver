@@ -2,7 +2,6 @@ package com.ljio.winnerownner_webserver.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.Getter;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
@@ -14,9 +13,9 @@ public class RoomInfo {
     @Id
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String ID;
+    private Long ID;
 
-    @Column(name = "RoomSettiongID")
+    @Column(name = "RoomSettingID")
     private String RoomSettingID;
 
     @Column(name = "HostID")
@@ -46,7 +45,4 @@ public class RoomInfo {
     @Column(name = "CreatedAt")
     @CreationTimestamp
     private LocalDateTime CreatedAt;
-
-
-
 }
