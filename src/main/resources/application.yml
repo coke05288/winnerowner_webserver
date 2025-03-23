@@ -3,11 +3,16 @@ spring:
   application:
     name: winnerownner_webserver
   datasource:
-    url: jdbc:h2:mem:testdb
+    url: jdbc:h2:~/wo
     driver-class-name: org.h2.Driver
-    username: user
+    username: sa
     password:
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.H2Dialect
+      ddl-auto: create
+    show-sql: true
   h2:
     console:
       enabled: true
-      pass: /h2-console
+      path: /h2-console
