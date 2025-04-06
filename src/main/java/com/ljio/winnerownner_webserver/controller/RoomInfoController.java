@@ -8,6 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/roomInfo")
@@ -15,6 +17,11 @@ public class RoomInfoController {
     private final RoomInfoService roomInfoService;
 
     // 룸 리스트 조회
+    @GetMapping("/list")
+    public ResponseEntity<List<RoomInfo>> getRoomList(){
+        List<RoomInfo> result = roomInfoService.getRoomInfoList();
+        return ResponseEntity.status(HttpStatus.OK).body(result);
+    }
 
     // 룸 상세정보 조회
     @GetMapping("/{id}")
