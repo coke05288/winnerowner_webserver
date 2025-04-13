@@ -13,36 +13,39 @@ public class RoomInfo {
     @Id
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long ID;
+    private Long id;
 
     @Column(name = "RoomSettingID")
-    private String RoomSettingID;
+    private String roomSettingID;
 
     @Column(name = "HostID")
-    private String HostID;
+    private String hostID;
+
+    @Column(name = "SessionID")
+    private String sessionID;
 
     @Column(name = "Name")
-    private String Name;
+    private String name;
 
     @Column(name = "PlayerCount")
-    private int PlayerCount;
+    private int playerCount;
 
     @Column(name = "LimitCount")
-    private int LimitCount;
+    private int limitCount;
 
     @Column(name = "Description")
-    private String Description;
+    private String description;
 
     @Column(name = "IsPublic")
-    private boolean IsPublic;
+    private boolean isPublic;
 
     @Column(name = "Password")
-    private String Password;
+    private String password;
 
     @Column(name = "Status")
-    private String Status;
+    private String status;
 
     @Column(name = "CreatedAt")
     @CreationTimestamp
-    private LocalDateTime CreatedAt;
+    private LocalDateTime createdAt;
 }
